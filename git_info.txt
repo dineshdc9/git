@@ -1,0 +1,75 @@
+GIT Introduction
+It is a widely used version control system
+
+#Confugure Username
+$ git config --global user.name <"user name">
+
+#Configure Mail ID 
+git config --global user.email <emailid>
+
+#to open default code editor
+$code
+
+#To set default code editior
+$git config --global core.editor "code --wait"
+$git config --global -e  (#to edit all global settings in file named ".gitconfig")
+
+#end of line feed settings
+$git config --global core.autocrlf true (for windows)
+$git config --global core.autocrlf input (for mac)                         
+
+#To access help about a command (here about 'config')
+git config --help (to get detailed help)
+git config -h     (to get short summary)
+
+#Commiting best practices
+-Commit shouldent be too big or too small
+-Each commit should represent logically separate change
+-Do not commit 5-10 times a day commit only when you think its worth it
+-Big fix and typo should have different commits
+-Try and use past tense for commit messege (like fixed thye bug)
+
+#Skipping the staging area
+You can skip it only when you are really sure about it
+USE directly after changes, git commit -a -m (or-am) "Fixed the bug"
+
+#Removing Files (Its a three steop work only deleting wont work you have to commit or else it will still be in staging area)
+rm filename.txt
+git add filename.txt
+git commit -m "removed filename.txt"
+
+#Move or rename file
+git mv file1.txt file2.txt
+git add file2.txt
+git commit -m "renamed file1.txt to file2.txt"
+
+#We should tell git to ignore certain files and directories(eg. log file, binary files etc.)
+create a special file called .gitignore
+use using vscode
+mention all the files to ignore eg. logs/, main.log,*.log etc.
+git add .gitignore
+(Note:It will not ignore the already committed file for that you have to use cashe removal or recursive removal) 
+
+# git diff (To see unstaged changes)
+# git diff --staged (To see staged changes)
+
+## git config --global diff.tool vscode  (to set vscode default)
+## git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE" (To launch vscode)
+
+##Viewing History
+git log
+git log --oneline  (short summary of commit)
+git log --oneline --reverse (to see logs in reverse order)
+
+##git show (to show perticular edit)
+
+##Staging//Unstaging files
+git add filename
+git reseet filename
+git restore --stated filename (stage)
+git restore filename (unstage)
+git restore . (undo all local changes)
+git clean  (to clean staging area)
+
+
+
