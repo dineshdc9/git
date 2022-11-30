@@ -74,7 +74,7 @@ git clean  (to clean staging area)
 
 ###GIT Commands ###
 #Initializing a repository
-git init 
+git init (it will create empty git repository in local)
 
 #Staging files 
 git add file1.js # Stages a single file 
