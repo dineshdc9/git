@@ -72,4 +72,12 @@ git restore . (undo all local changes)
 git clean  (to clean staging area)
 
 
+###GIT Commands ###
+#Initializing a repository
+git init 
 
+#Staging files 
+git add file1.js # Stages a single file 
+git add file1.js file2.js # Stages multiple files
+git add *.js # Stages with a pattern
+git add . # Stages the current directory and all its content 
